@@ -9,5 +9,5 @@ Features:-
 - Tracks passed and failed courses
 - Displays full course summary
 
-How to run
+How to run: -
 python gradecalculator.py
