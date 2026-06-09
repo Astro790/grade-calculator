@@ -5,8 +5,18 @@ def getDetails(no_of_courses,student_db):
     i = 0
     while i<no_of_courses:
         course = input("Enter the name of the course: ")
-        score = float(input("Enter your score: "))
-        unit = int(input(f"How many unit is {course}: "))
+        while True:
+            try:
+                score = float(input("Enter your score: "))
+                break
+            except ValueError:
+                print("ERROR!!!\nACCEPTS ONLY NUMBERS")
+        while True:
+            try:
+                unit = int(input(f"How many unit is {course}: "))
+                break
+            except ValueError:
+                print("ERROR!!!\nACCEPTS ONLY NUMBERS")
         student_course = {}
         student_course["course"] = course
         student_course["score"] = score
@@ -96,9 +106,14 @@ def displayStudentPerformance(student_db,no_of_courses):
     print(f"YOU FAILED {failed} COURSES")
 
 
-
-no_of_courses = int(input("How many courses are you offering "))
+while True:
+    try:
+        no_of_courses = int(input("How many courses are you offering "))
+        break
+    except ValueError:
+        print("ERROR!!!\nACCEPTS ONLY INTEGERS")
 student_db = getDetails(no_of_courses,student_db = [])
 student_db =  grade_and_pointCalculator(student_db)
+print(student_db)
 displayCourseDetail(student_db)
 displayStudentPerformance(student_db,no_of_courses)

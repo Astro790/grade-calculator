@@ -8,6 +8,10 @@ Features:-
 - Computes GPA using credit units
 - Tracks passed and failed courses
 - Displays full course summary
+- Uses while loop with try and except to prevent crashes
+
 
 How to run: -
 python gradecalculator.py
+
+
