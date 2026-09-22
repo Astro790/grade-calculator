@@ -114,6 +114,5 @@ while True:
         print("ERROR!!!\nACCEPTS ONLY INTEGERS")
 student_db = getDetails(no_of_courses,student_db = [])
 student_db =  grade_and_pointCalculator(student_db)
-print(student_db)
 displayCourseDetail(student_db)
 displayStudentPerformance(student_db,no_of_courses)
